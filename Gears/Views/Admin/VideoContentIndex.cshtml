@@ -1,0 +1,13 @@
+﻿
+@model Gears.Models.VideoContent
+@{
+    Layout = "_AdminLayout";
+}
+
+
+
+<div>
+    <h3>@Model.Header</h3>
+    <p>@Model.Paragraph</p>
+</div>
+<a asp-action="EditVideoContent" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>

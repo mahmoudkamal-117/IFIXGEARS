@@ -1,0 +1,106 @@
+.footer
+{
+    padding-top: 60px;
+    background: #000;
+    h4{
+        color: $color-nave;
+       // font-weight: bold;
+        padding:5px 0 20px 0;
+    }
+    ul
+    {
+        margin: 10px 0;
+    }
+    .contact
+    {
+        ul
+        {
+            li{
+                margin: 15px 0;
+                font-size: 15px;
+                color: $p-color;
+                i
+                {
+                    color: #606060;
+                    margin: 0 0px 0 10px ;
+                    font-size: 20px;
+                }
+                a{
+                    color:$p-color;
+                    letter-spacing: 1px;
+                    
+                    &:hover
+                    {
+                        color: $hover-nave;
+                    }
+                }
+            }
+        }
+    }
+
+    .follow-us
+    {
+        li{
+            
+            
+
+            i
+            {
+                background:#111;
+                padding: 15px;
+                border-radius: 50%;
+                margin: 0 0 0 10px;
+                font-size: 18px;
+                color: $p-color;
+                &:hover
+                {
+                    color: $hover-nave;
+                }
+            }
+        }
+    }
+
+    .hours-work
+    {
+        padding: 10px;
+        background: #111;
+        li{
+            justify-content: space-between;
+            margin: 10px 0;
+            color: $p-color;
+        }
+    }
+
+    .map
+    {
+        position: relative;
+
+       overflow: hidden !important;
+       min-height: 260px;
+        .contianer-map
+        {
+            height: 100%;
+            overflow: hidden;
+            iframe{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+               
+            }
+        }
+
+    }
+
+    .copyright
+    {
+        padding: 15px;
+        margin-top: 40px;
+        background: #111;
+        color: $p-color;
+        
+    }
+}

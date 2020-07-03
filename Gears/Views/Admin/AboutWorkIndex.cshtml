@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Gears.Models.AboutWork>
+
+@{
+    Layout = "_AdminLayout";
+}
+
+
+    <div>
+        <p>
+            <a asp-action="CreateAboutWork" class="btn btn-primary">Create New</a>
+        </p>
+        <table class="table table-bordered">
+
+            <thead>
+                <tr>
+                    <th>Icon</th>
+                    <th>Header</th>
+                    <th>Paragraph</th>
+                    
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var pro in Model)
+                {
+                    <tr>
+                        <td>@pro.Icon</td>
+                        <td>@pro.Header</td>                    
+                        <td>@pro.Paragraph</td>
+                        
+                        <td>
+                            <a asp-action="EditAboutWork" asp-route-id="@pro.Id">Edit</a>
+                           
+                            <a asp-action="DeleteAboutWork" asp-route-id="@pro.Id">Delete</a>
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>

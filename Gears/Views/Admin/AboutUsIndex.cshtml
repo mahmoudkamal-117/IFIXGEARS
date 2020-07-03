@@ -1,0 +1,11 @@
+﻿@model Gears.Models.AboutUs
+@{
+    Layout = "_AdminLayout";
+}
+
+
+
+<div>
+    <p >@Model.Paragraph</p>
+</div>
+<a asp-action="EditAboutUs" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>

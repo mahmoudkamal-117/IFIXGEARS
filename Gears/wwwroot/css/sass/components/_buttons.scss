@@ -1,0 +1,102 @@
+.button-parent
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.btn
+{
+    border-radius: 35px;
+    background:transparent;
+    padding: 12px;
+   // min-width: 181px;
+    margin-top: 20px;
+    transition: all 0.4s linear;
+    font-size: 18px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    color: #fff;
+    position: relative;
+
+
+    @media (max-width:768px) {
+        padding: 10px;
+       // min-width: 140px;
+        font-size: 14px;
+        margin-top: 0px;
+    }
+
+
+
+
+    
+
+
+    &.one
+    {
+        background: #000;
+        $border: 3px;
+        background-clip: padding-box;
+        border: $border solid  transparent;
+    
+        i
+        {
+            font-size: 16px;
+        }
+    
+        &::before
+        {
+            content: "";
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+            margin: -$border;
+            border-radius: inherit;/* importanr*/
+            background: $main-color;
+           transition: all 0.5s;
+        }
+    
+    
+        &:hover
+        {
+            color: #00eeff;
+            &::before
+            {
+                filter: hue-rotate(90deg);    
+                filter: blur(5px);
+            }
+            
+        }
+    
+    }
+
+    &.three{
+        
+        padding: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 37px !important;
+        letter-spacing: 0;
+        word-spacing: 0;
+        border-radius: 50%;
+        @media (max-width:500px) {
+            padding: 15px;
+           
+    
+        }
+        i
+        {
+            font-size: 16px;
+        }
+
+    }
+
+
+    
+    /*border-image-source: $main-color;
+    border-image-slice: 1;*/
+}

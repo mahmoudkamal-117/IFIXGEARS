@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Gears.Models.CustomerOpinion>
+
+@{
+    Layout = "_AdminLayout";
+}
+
+
+<div>
+    <p>
+        <a asp-action="CreateCustomerOpinion" class="btn btn-primary">Create New</a>
+    </p>
+    <table class="table table-bordered">
+
+        <thead>
+            <tr>
+               
+                <th>Name</th>
+                <th>Description</th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var opinion in Model)
+            {
+                <tr>
+                    
+                    <td>@opinion.Name</td>
+                    <td>@opinion.Description</td>
+
+                    <td>
+                        <a asp-action="EditCustomerOpinion" asp-route-id="@opinion.Id">Edit</a>
+
+                        <a asp-action="DeleteCustomerOpinion" asp-route-id="@opinion.Id">Delete</a>
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>

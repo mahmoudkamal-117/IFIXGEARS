@@ -1,0 +1,21 @@
+﻿
+
+@model Gears.Models.ContactUs
+@{
+    ViewData["Title"] = "HomeContentIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+    <div>
+        <p>@Model.Address</p> <br />
+
+        <p>@Model.Phone</p> <br />
+        <p>@Model.Url</p> <br />
+        <p>@Model.Gmail</p> <br />
+
+
+
+
+        <br />
+        <a asp-action="EditContactUs" asp-route-id="@Model.Id" class="btn btn-dark">Edit</a>
+    </div>

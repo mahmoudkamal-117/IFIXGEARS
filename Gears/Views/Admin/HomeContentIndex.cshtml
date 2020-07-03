@@ -1,0 +1,18 @@
+﻿
+@model Gears.Models.HomeContent
+@{
+    ViewData["Title"] = "HomeContentIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div>
+    <div>
+        <img class="masthead-avatar mb-5" src="~/image/@Model.Image" style="border-radius:50%; height:300px; width:300px;" alt="">
+    </div>
+
+
+    <p class="masthead-subheading font-weight-light mb-0">@Model.Paragraph</p>
+
+    <br />
+    <a asp-action="EditHomeContent" asp-route-id="@Model.Id" class="btn btn-dark">Edit</a>
+</div>
